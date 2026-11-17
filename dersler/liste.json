@@ -1,0 +1,22 @@
+{
+  "olusturulma_tarihi": "2026-11-17T14:58:06Z",
+  "ders_sayisi": 2,
+  "dersler": [
+    {
+      "klasor": "EP101-Fizik-Lab-1",
+      "deneyler": [
+        "01-Serbest-Dusme",
+        "02-Atwood-Makinesi",
+        "03-Basit-Sarkac-Periyodu"
+      ]
+    },
+    {
+      "klasor": "EP102-Fizik-Lab-2",
+      "deneyler": [
+        "01-Ohm-Yasasi-ve-Direnc-Aglari",
+        "02-RC-Devresi-Zaman-Sabiti",
+        "03-Ince-Kenarli-Mercek-Odak"
+      ]
+    }
+  ]
+}

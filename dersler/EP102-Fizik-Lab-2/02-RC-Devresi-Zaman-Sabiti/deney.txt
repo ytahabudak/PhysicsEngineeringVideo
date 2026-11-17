@@ -1,0 +1,27 @@
+BASLIK: RC Devresinde Kondansatör Dolma-Boşalma ve Zaman Sabiti (τ)
+SURE: 90 dk
+ZORLUK: İleri
+KATEGORI: Elektrik ve Manyetizma
+OLCULEN: Kondansatör Gerilimi Vc (V); Zaman t (s); Zaman Sabiti τ (s)
+UYARI: Elektrolitik kondansatörlerin kutup (+ / -) yönlerine dikkat ediniz; ters bağlantı bileşene zarar verebilir.
+[AMAC]
+Bir direnç ve kondansatörden oluşan RC devresinde kondansatörün dolma ve boşalma eğrilerini incelemek ve devrenin karakteristik zaman sabitini (τ = R·C) tayin etmek.
+
+[TEORI]
+Başlangıçta yüksüz bir kondansatör V0 gerilimi altında R direnci üzerinden şarj edildiğinde uçlarındaki gerilim Vc(t) = V0 (1 - e^(-t/RC)) şeklinde üstel olarak artar. t = τ = RC anında kondansatör gerilimi maksimum değerinin %63.2'sine ulaşır.
+
+[MALZEME]
+- DC güç kaynağı ve kare dalga sinyal üreteci
+- Dijital osiloskop veya veri toplama arayüzü
+- 10 kΩ direnç ve 100 µF kondansatör
+- İki konumlu anahtar ve bağlantı kabloları
+
+[ADIMLAR]
+- R ve C elemanlarını seri bağlayarak devreyi kurunuz.
+- Anahtarı şarj konumuna getirip her 2 saniyede bir kondansatör üzerindeki gerilimi kaydediniz.
+- Kondansatör tam dolduktan sonra anahtarı deşarj konumuna alarak gerilimin düşüşünü izleyiniz.
+- ln(V0 - Vc) ile zaman t grafiğinin eğiminden τ zaman sabitini hesaplayınız.
+
+[NOT]
+Voltmetre iç direncinin yüksek zaman sabitli devrelerde ölçüm doğruluğuna etkisini yorumlayınız.
+VIDEO: https://youtu.be/UDVtMYqUAyw

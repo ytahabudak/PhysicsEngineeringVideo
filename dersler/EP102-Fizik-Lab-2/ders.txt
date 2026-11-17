@@ -1,0 +1,4 @@
+KOD: EP102
+AD: Fizik Laboratuvarı II (Elektrik, Manyetizma ve Optik)
+DONEM: Bahar
+OZET: Doğru akım devreleri, Ohm yasası, RC geçici rejim analizi, manyetik alan ölçümleri ve geometrik optik deneylerini kapsayan laboratuvar dersi.

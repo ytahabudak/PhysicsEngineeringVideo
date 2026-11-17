@@ -1,0 +1,5 @@
+# Örnek ders tanım dosyası (Geliştirme ve test amaçlı örnek içeriktir)
+KOD: EP101
+AD: Fizik Laboratuvarı I (Mekanik)
+DONEM: Güz
+OZET: Kinematik, Newton hareket yasaları, yerçekimi ivmesi, enerji korunumu ve basit harmonik hareket konularının deneysel yöntemlerle incelendiği temel fizik laboratuvarı dersi.

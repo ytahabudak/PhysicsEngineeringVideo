@@ -1,0 +1,30 @@
+# Örnek deney dosyası
+BASLIK: Serbest Düşme Hareketi ve Yerçekimi İvmesinin Tayini
+SURE: 60 dk
+ZORLUK: Kolay
+KATEGORI: Mekanik
+OLCULEN: Düşme Yüksekliği h (m); Düşme Süresi t (s); Yerçekimi İvmesi g (m/s²)
+UYARI: Metal kürenin düşme noktasına elinizi yaklaştırmayınız; algılayıcı plakanın düz konumda olduğundan emin olunuz.
+[AMAC]
+Hava direncinin ihmal edilebildiği küçük düşme yüksekliklerinde serbest bırakılan bir cismin hareket denklemlerini incelemek ve deneysel verilerden yerel yerçekimi ivmesini (g) hesaplamak.
+
+[TEORI]
+Sabit bir yerçekimi alanı içerisinde ilk hızsız (v0 = 0) serbest bırakılan bir cisim, sabit g ivmesi ile düzgün hızlanan doğrusal hareket yapar. Cismin t sürede aldığı düşey yol h = (1/2) g t² bağıntısı ile ifade edilir. Farklı h yükseklikleri için ölçülen t² değerleri grafiğe aktarıldığında elde edilen doğrunun eğimi g/2 değerini verir.
+
+[MALZEME]
+- Elektromıknatıslı serbest bırakma düzeneği
+- Milisaniye hassasiyetli dijital kronometre
+- Farklı çaplarda çelik küreler
+- Milimetrik ölçekli düşey cetvel (1.5 m)
+- Darbe algılayıcı alt plaka
+
+[ADIMLAR]
+- Düşey cetvel üzerindeki elektromıknatısı h = 0.20 m yüksekliğine sabitleyiniz.
+- Çelik küreyi elektromıknatısa yerleştirip dijital kronometreyi sıfırlayınız.
+- Tetikleme anahtarına basarak küreyi serbest bırakınız ve kronometrede okunan t süresini kaydediniz.
+- Aynı yükseklik için ölçümü en az 5 kez tekrarlayarak ortalama düşme süresini belirleyiniz.
+- Yüksekliği 0.20 m aralıklarla 1.00 m'ye kadar artırarak tüm adımları tekrarlayınız ve h - t² grafiğinden g değerini hesaplayınız.
+
+[NOT]
+Örnek eğitim içeriğidir. Hesaplanan deneysel g değerini teorik 9.81 m/s² değeri ile karşılaştırarak bağıl hata yüzdesini raporlayınız.
+VIDEO: video.mp4

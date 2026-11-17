@@ -1,0 +1,109 @@
+# GAÜN Fizik Mühendisliği – Dijital Deney ve Ders Arşivi
+## Öğretim Üyeleri İçin İçerik ve Deney Dosyası Hazırlama Rehberi
+
+Bu rehber, dijital deney arşivine yeni bir **ders** veya **deney** eklemek isteyen öğretim üyelerinin hazırlayacağı klasör ve metin dosyalarının standartlarını açıklar. Sistem, hazırladığınız klasörleri otomatik olarak okuyarak web sayfasına dönüştürmektedir.
+
+---
+
+### 1. Klasör Yapısı ve İsimlendirme Kuralları
+
+Sisteme yüklenecek içerikler standart bir klasör düzeninde hazırlanmalıdır. Klasör isimlerinde **Türkçe karakter (`ç, ğ, ı, ö, ş, ü`) ve boşluk kullanılmamalıdır**; kelimeler tire (`-`) ile ayrılmalıdır.
+
+**Örnek Klasör Ağacı:**
+```text
+EP101-Fizik-Lab-1/                  <-- Ders Klasörü
+├── ders.txt                        <-- Ders tanıtım dosyası
+├── 01-Serbest-Dusme/               <-- 1. Deney Klasörü (Başındaki sayı sırayı belirler)
+│   ├── deney.txt                   <-- Deney föyü metni
+│   └── video.mp4                   <-- (İsteğe bağlı) Yerel deney videosu
+├── 02-Atwood-Makinesi/             <-- 2. Deney Klasörü
+│   └── deney.txt
+└── 03-Basit-Sarkac-Periyodu/       <-- 3. Deney Klasörü
+    ├── deney.txt
+    └── video.mp4
+```
+
+* **Sıralama Kuralı:** Deney klasörlerinin başına mutlaka iki haneli sıra numarası yazılmalıdır (`01-`, `02-`, `03-` ... `10-`). Web sitesi deneyleri bu numaraya göre otomatik sıralar.
+
+---
+
+### 2. Ders Tanıtım Dosyası (`ders.txt`) Hazırlama
+
+Yeni bir ders açılacaksa, ders klasörünün içine **`ders.txt`** adında düz bir metin dosyası oluşturulmalı ve aşağıdaki şablon doldurulmalıdır:
+
+```text
+KOD: EP101
+AD: Fizik Laboratuvarı I (Mekanik)
+OZET: Kinematik, Newton hareket yasaları, yerçekimi ivmesi ve basit harmonik hareket konularının deneysel yöntemlerle incelendiği temel fizik laboratuvarı dersi.
+```
+
+* `KOD`: Dersin resmi kodu.
+* `AD`: Web sitesinde görünecek tam ders adı.
+* `OZET`: Dersin kapsamını anlatan 1-2 cümlelik kısa açıklama.
+
+---
+
+### 3. Deney Föyü Dosyası (`deney.txt`) Hazırlama
+
+Her deney klasörünün içinde mutlaka **`deney.txt`** adında bir dosya bulunmalıdır. Aşağıdaki şablonu kopyalayıp kendi deneyinize göre doldurabilirsiniz:
+
+```text
+BASLIK: Serbest Düşme Hareketi ve Yerçekimi İvmesinin Tayini
+KATEGORI: Mekanik
+OLCULEN: Düşme Yüksekliği h (m); Düşme Süresi t (s); Yerçekimi İvmesi g (m/s²)
+UYARI: Metal kürenin düşme noktasına elinizi yaklaştırmayınız.
+[AMAC]
+Hava direncinin ihmal edilebildiği küçük düşme yüksekliklerinde serbest bırakılan bir cismin hareket denklemlerini incelemek ve deneysel verilerden yerel yerçekimi ivmesini (g) hesaplamak.
+
+[TEORI]
+Sabit bir yerçekimi alanı içerisinde ilk hızsız serbest bırakılan bir cisim, sabit g ivmesi ile düzgün hızlanan doğrusal hareket yapar. Cismin t sürede aldığı düşey yol h = (1/2) g t² bağıntısı ile ifade edilir.
+
+[MALZEME]
+- Elektromıknatıslı serbest bırakma düzeneği
+- Milisaniye hassasiyetli dijital kronometre
+- Farklı çaplarda çelik küreler
+- Milimetrik ölçekli düşey cetvel (1.5 m)
+
+[ADIMLAR]
+- Düşey cetvel üzerindeki elektromıknatısı h = 0.20 m yüksekliğine sabitleyiniz.
+- Çelik küreyi elektromıknatısa yerleştirip dijital kronometreyi sıfırlayınız.
+- Tetikleme anahtarına basarak küreyi serbest bırakınız ve süreyi kaydediniz.
+- Yüksekliği 0.20 m aralıklarla artırarak işlemi 5 kez tekrarlayınız.
+
+[NOT]
+Hesaplanan deneysel g değerini teorik 9.81 m/s² değeri ile karşılaştırarak bağıl hata yüzdesini raporlayınız.
+VIDEO: video.mp4
+```
+
+#### Alanların Açıklamaları:
+* **`BASLIK`:** Deneyin sayfada görünecek ana başlığı.
+* **`KATEGORI`:** Filtreleme menüsünde çıkacak alan adı (Örn: `Mekanik`, `Elektrik ve Manyetizma`, `Optik`, `Dalgalar ve Salınımlar`, `Modern Fizik`).
+* **`OLCULEN`:** Deneyde ölçülen büyüklükler ve birimleri. Birden fazla ise aralarına **noktalı virgül (`;`)** konulmalıdır.
+* **`UYARI`:** Laboratuvar güvenliği ile ilgili dikkat edilmesi gereken bir durum varsa yazılır. Uyarı yoksa `UYARI:` şeklinde boş bırakılabilir (sayfada uyarı kutusu gizlenir).
+* **`[AMAC]` ve `[TEORI]`:** Altına paragraf halinde deneyin amacı ve teorik formülleri/açıklamaları yazılır.
+* **`[MALZEME]` ve `[ADIMLAR]`:** Altına her satır başına tire (`-`) koyularak maddeler halinde yazılır. Sistem uygulama adımlarını otomatik olarak `1, 2, 3...` şeklinde numaralandırır.
+* **`[NOT]`:** Öğrencilere yönelik ek hatırlatmalar veya raporlama notları yazılır. Boş bırakılırsa sayfada görünmez.
+
+---
+
+### 4. Deney Videosu Ekleme Seçenekleri
+
+Deney sayfasında videonun görünmesi için `deney.txt` dosyasının en altındaki `VIDEO:` satırı iki farklı şekilde kullanılabilir:
+
+1. **Bilgisayardan Video Dosyası Yükleme (MP4):**
+   * Video dosyasının adını **`video.mp4`** yapın ve `deney.txt` ile aynı klasörün içine koyun.
+   * `deney.txt` içindeki satırı `VIDEO: video.mp4` olarak bırakın.
+2. **YouTube Bağlantısı Kullanma:**
+   * Video YouTube üzerinde yüklü ise bağlantıyı doğrudan yapıştırın:
+     `VIDEO: https://www.youtube.com/watch?v=ORNEK_ID`
+3. **Henüz Video Yoksa:**
+   * `VIDEO:` satırını boş bırakabilirsiniz. Sistem deney föyünü hatasız gösterir ve video alanında *"Bu deney için henüz video dosyası yüklenmemiş"* bilgisini sunar.
+
+---
+
+### 5. Teslim Öncesi Dikkat Edilmesi Gerekenler
+
+* **Word Kullanmayın:** `ders.txt` ve `deney.txt` dosyaları Microsoft Word (`.docx`) ile değil, Windows **Not Defteri (Notepad)** veya benzeri düz metin editörleriyle hazırlanmalıdır.
+* **UTF-8 Karakter Kodlaması:** Türkçe karakterlerin (`ğ, ü, ş, ı, ö, ç`) ve matematiksel sembollerin (`², √, π, Ω, µ, τ`) bozulmaması için Not Defteri'nde **"Farklı Kaydet"** dedikten sonra alt kısımdaki **Kodlama (Encoding)** seçeneğinin **`UTF-8`** olduğundan emin olun.
+* **Köşeli Parantezleri Değiştirmeyin:** `[AMAC]`, `[TEORI]`, `[MALZEME]`, `[ADIMLAR]`, `[NOT]` başlıkları sistemin bölümleri tanıması için anahtar kelimelerdir; isimleri değiştirilmemelidir.
+* **Teslim:** Hazırladığınız ders/deney klasörünü `.zip` haline getirerek site yöneticisine iletmeniz yeterlidir.

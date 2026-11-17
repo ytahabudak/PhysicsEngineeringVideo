@@ -1,0 +1,27 @@
+BASLIK: İnce Kenarlı Merceklerde Odak Uzaklığı ve Görüntü Oluşumu
+SURE: 75 dk
+ZORLUK: Orta
+KATEGORI: Optik
+OLCULEN: Cisim Mesafesi do (cm); Görüntü Mesafesi di (cm); Odak Uzaklığı f (cm)
+UYARI: Işık kaynağına doğrudan çıplak gözle bakmayınız.
+[AMAC]
+İnce kenarlı (yakınsak) bir merceğin odak uzaklığını Gauss mercek formülü ve Bessel yöntemi ile deneysel olarak belirlemek.
+
+[TEORI]
+İnce kenarlı bir mercekte cisim uzaklığı (do), görüntü uzaklığı (di) ve odak uzaklığı (f) arasındaki ilişki 1/f = 1/do + 1/di bağıntısı ile tanımlanır. Cisim ile ekran arasındaki sabit D > 4f mesafesi için keskin görüntü oluşturan iki mercek konumu arasındaki fark d ise f = (D² - d²) / (4D) eşitliğiyle hesaplanır.
+
+[MALZEME]
+- Optik ray (120 cm ölçekli)
+- LED aydınlatmalı cisim kaynağı
+- İnce kenarlı cam mercek ve tutucu
+- Mat beyaz görüntü ekranı
+
+[ADIMLAR]
+- Cisim kaynağı ile ekran arasındaki mesafeyi 80 cm olarak sabitleyiniz.
+- Merceği ray üzerinde hareket ettirerek ekranda net ve ters bir görüntü elde ediniz.
+- do ve di mesafelerini ölçerek odak uzaklığını hesaplayınız.
+- Farklı cisim-ekran uzaklıkları için işlemi 5 kez tekrarlayarak ortalama odak uzaklığını bulunuz.
+
+[NOT]
+Küresel aberasyon etkisini azaltmak için mercek kenarlarını maskeleyen diyafram kullanabilirsiniz.
+VIDEO:

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gaziantep Üniversitesi Fizik Mühendisliği Bölümü dijital deney föyleri, teorik altyapı ve laboratuvar video arşivi.">
+  <title>GAÜN Fizik Mühendisliği – Dijital Deney ve Ders Arşivi</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="home">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="GAÜN Fizik Mühendisliği Ana Sayfa">
+        <div class="brand-mark">
+          <img src="assets/images/logo.png" alt="GAÜN Fizik Mühendisliği Logo">
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">GAÜN Fizik Mühendisliği</span>
+          <span class="brand-sub">Dijital Deney &amp; Ders Arşivi</span>
+        </div>
+      </a>
+
+      <button class="mobile-toggle" aria-label="Menüyü Aç/Kapat" aria-expanded="false">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <nav class="nav-links" aria-label="Ana Menü">
+        <a href="index.html" class="nav-link active">Ana Sayfa</a>
+        <a href="dersler.html" class="nav-link">Dersler</a>
+        <a href="deneyler.html" class="nav-link">Deneyler</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Sinematik Hero Bölümü -->
+    <section class="hero">
+      <canvas id="physics-canvas" aria-hidden="true"></canvas>
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="container hero-content">
+        <div class="hero-badge">
+          <span class="pulse-dot"></span>
+          <span>GAZİANTEP ÜNİVERSİTESİ • FİZİK MÜHENDİSLİĞİ BÖLÜMÜ</span>
+        </div>
+        <h1 class="hero-title">Fiziği yalnızca öğrenme.<br><span>Keşfet.</span></h1>
+        <p class="hero-subtitle">
+          Gaziantep Üniversitesi Fizik Mühendisliği deney ve ders arşivi. Laboratuvar deneylerinin teorik temellerini, ölçüm yöntemlerini ve uygulama kayıtlarını inceleyebilirsiniz.
+        </p>
+        <div class="hero-actions">
+          <a href="deneyler.html" class="btn btn-primary">Deney Arşivini Keşfet →</a>
+          <a href="dersler.html" class="btn btn-secondary">Laboratuvar Dersleri</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Canlı İstatistik Şeridi -->
+    <section class="stats-bar" aria-label="Arşiv Özeti">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <span class="stat-value" id="stat-courses">--</span>
+            <span class="stat-label">Aktif Laboratuvar Dersi</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value" id="stat-experiments">--</span>
+            <span class="stat-label">Dijital Deney Föyü</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">100%</span>
+            <span class="stat-label">Açık Erişim &amp; Ücretsiz</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">16:9</span>
+            <span class="stat-label">Video &amp; Teorik Anlatım</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Öne Çıkan Deneyler -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="section-eyebrow">Laboratuvar Seçkisi</span>
+            <h2 class="section-title">Öne Çıkan Deneyler</h2>
+            <p class="section-desc">Mekanik, elektrik ve optik laboratuvarlarından seçilmiş temel fizik deneyleri.</p>
+          </div>
+          <a href="deneyler.html" class="btn btn-secondary">Tüm Deneyleri Gör →</a>
+        </div>
+        <div class="cards-grid" id="featured-experiments">
+          <div class="skeleton"></div>
+          <div class="skeleton"></div>
+          <div class="skeleton"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Laboratuvar Dersleri -->
+    <section class="section" style="border-top: 1px solid var(--border-hairline); background: rgba(7, 12, 23, 0.45);">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="section-eyebrow">Müfredat Yapısı</span>
+            <h2 class="section-title">Laboratuvar Dersleri</h2>
+            <p class="section-desc">Laboratuvar derslerini seçerek ilgili deney listesine ulaşın.</p>
+          </div>
+          <a href="dersler.html" class="btn btn-secondary">Ders Kataloğu →</a>
+        </div>
+        <div class="cards-grid" id="home-courses">
+          <div class="skeleton"></div>
+          <div class="skeleton"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand" style="margin-bottom: 14px;">
+            <div class="brand-mark">
+              <img src="assets/images/logo.png" alt="GAÜN Fizik Mühendisliği Logo">
+            </div>
+            <div class="brand-text">
+              <span class="brand-title">GAÜN Fizik Mühendisliği</span>
+              <span class="brand-sub">Dijital Laboratuvar Platformu</span>
+            </div>
+          </div>
+          <p style="color: var(--text-secondary); font-size: 0.9rem; max-width: 380px;">
+            Gaziantep Üniversitesi Mühendislik Fakültesi Fizik Mühendisliği Bölümü lisans laboratuvar dersleri ve deneysel eğitim kaynakları açık erişim arşivi.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Platform</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="dersler.html">Laboratuvar Dersleri</a></li>
+            <li><a href="deneyler.html">Tüm Deney Arşivi</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Bölüm İletişim</h4>
+          <ul class="footer-links">
+            <li>Gaziantep Üniversitesi, Üniversite Bulvarı</li>
+            <li>27310 Şehitkamil / Gaziantep</li>
+            <li>Mühendislik Fakültesi – Fizik Mühendisliği</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>Yusuf Taha BUDAK tarafından hazırlanmıştır</span>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

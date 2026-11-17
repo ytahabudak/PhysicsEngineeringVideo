@@ -1,0 +1,27 @@
+BASLIK: Basit Sarkaç ile Küçük Açı Yaklaşımı ve Periyot Analizi
+SURE: 75 dk
+ZORLUK: Kolay
+KATEGORI: Dalgalar ve Salınımlar
+OLCULEN: İp Uzunluğu L (m); Salınım Periyodu T (s); Açısal Genlik θ (derece)
+UYARI:
+[AMAC]
+Basit bir sarkacın salınım periyodunun sarkaç uzunluğuna, kütlesine ve başlangıç salınım açısına bağlılığını deneysel olarak araştırmak.
+
+[TEORI]
+Küçük açısal genlikler (θ < 10°) için sin(θ) ≈ θ yaklaşımı geçerlidir ve basit sarkaç basit harmonik hareket yapar. Bu koşul altında periyot T = 2π √(L / g) bağıntısıyla verilir ve sarkacın kütlesinden bağımsızdır.
+
+[MALZEME]
+- Üçayak ve destek çubuğu
+- Uzamaz ince ip ve açıölçer kadran
+- Farklı kütleli sarkaç topları (pirinç, alüminyum, çelik)
+- Dijital kronometre
+
+[ADIMLAR]
+- Sarkaç uzunluğunu kütle merkezine kadar L = 0.40 m olacak şekilde ayarlayınız.
+- Sarkacı düşeyden 8° ayırarak serbest bırakınız ve 10 tam salınım süresini ölçüp 10'a bölerek T periyodunu bulunuz.
+- Aynı uzunlukta farklı kütleli toplar kullanarak periyodun kütleden bağımsız olduğunu test ediniz.
+- İp uzunluğunu 0.60 m, 0.80 m ve 1.00 m yaparak T² - L grafiğini çiziniz.
+
+[NOT]
+Genlik 30° üzerine çıkarıldığında ölçülen periyot ile küçük açı formülü arasındaki farkı hesaplayınız.
+VIDEO:

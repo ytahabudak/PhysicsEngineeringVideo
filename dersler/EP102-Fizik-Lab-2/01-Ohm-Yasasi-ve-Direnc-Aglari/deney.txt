@@ -1,0 +1,26 @@
+BASLIK: Ohm Yasası ve Seri-Paralel Direnç Ağlarının Karakterizasyonu
+SURE: 60 dk
+ZORLUK: Kolay
+KATEGORI: Elektrik ve Manyetizma
+OLCULEN: Potansiyel Fark V (V); Akım Şiddeti I (mA); Eşdeğer Direnç R (Ω)
+UYARI: Güç kaynağını açmadan önce ampermetrenin devreye seri, voltmetrenin paralel bağlandığını kontrol ediniz.
+[AMAC]
+Ohmik iletkenlerde akım-gerilim doğrusallığını doğrulamak ve seri ile paralel bağlı direnç ağlarının eşdeğer dirençlerini deneysel olarak belirlemek.
+
+[TEORI]
+Sabit sıcaklıkta bir metalik iletkenin uçları arasındaki potansiyel fark (V), üzerinden geçen akım şiddeti (I) ile doğru orantılıdır: V = I · R. Seri bağlı dirençlerde eşdeğer direnç R_eş = R1 + R2 iken, paralel bağlantıda 1/R_eş = 1/R1 + 1/R2 bağıntısı geçerlidir.
+
+[MALZEME]
+- Ayarlanabilir DC güç kaynağı (0-15 V)
+- İki adet dijital multimetre (voltmetre ve ampermetre)
+- Standart karbon film dirençler (100 Ω, 220 Ω, 470 Ω)
+- Deney bordu (breadboard) ve bağlantı kabloları
+
+[ADIMLAR]
+- Tek bir direnç ile kurulan basit devrede gerilimi 1 V adımlarla 1 V'dan 8 V'a kadar artırınız.
+- Her gerilim basamağında akım değerini okuyarak V - I grafiğini oluşturunuz.
+- Dirençleri önce seri, ardından paralel bağlayarak eşdeğer direnç ölçümlerini tekrarlayınız.
+
+[NOT]
+Dirençlerin renk kodlarıyla okunan nominal değerleri ile multimetre ölçümlerini kıyaslayınız.
+VIDEO: video.mp4

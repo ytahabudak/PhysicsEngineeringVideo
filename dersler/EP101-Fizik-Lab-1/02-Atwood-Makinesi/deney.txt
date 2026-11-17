@@ -1,0 +1,27 @@
+BASLIK: Atwood Makinesi ile Newton'un İkinci Yasasının İncelenmesi
+SURE: 90 dk
+ZORLUK: Orta
+KATEGORI: Mekanik
+OLCULEN: Kütleler m1, m2 (kg); Sistem İvmesi a (m/s²); Yer Değiştirme x (m); Süre t (s)
+UYARI: Kütlelerin salınım yapmadan düşey doğrultuda hareket etmesini sağlayınız.
+[AMAC]
+Atwood makinesi düzeneği kullanarak sabit toplam kütle altında net kuvvetin sistem ivmesine etkisini ve sabit net kuvvet altında toplam kütlenin ivmeye etkisini deneysel olarak doğrulamak.
+
+[TEORI]
+Sürtünmesiz ve kütlesi ihmal edilen bir makaradan geçirilen esnemez bir ipin iki ucuna m1 ve m2 (m1 > m2) kütleleri asıldığında, sisteme etki eden net kuvvet F_net = (m1 - m2)g olur. Newton'un ikinci yasasına göre sistemin ortak ivmesi a = [(m1 - m2) / (m1 + m2)] g eşitliği ile belirlenir.
+
+[MALZEME]
+- Düşük sürtünmeli hassas makara sistemi
+- Kütle askıları ve yarık kütle seti (10 g - 200 g)
+- Fotokapı (photogate) zamanlayıcı sensörü
+- Esnemez hafif ip ve şerit metre
+
+[ADIMLAR]
+- İki askıya eşit başlangıç kütleleri yerleştirerek sistemin dengede kaldığını gözlemleyiniz.
+- Sağ taraftan sol tarafa 10 g kütle aktararak toplam kütleyi sabit tutunuz ve net kuvvet oluşturunuz.
+- Sistemi belirli bir yükseklikten serbest bırakarak fotokapı üzerinden geçiş süresini ve ivme değerini kaydediniz.
+- Kütle aktarımını 20 g ve 30 g değerleri için tekrarlayarak net kuvvet - ivme doğrusallığını inceleyiniz.
+
+[NOT]
+Makara atalet momentinin deneysel ivme üzerinde oluşturduğu sistematik sapmayı tartışınız.
+VIDEO: https://www.youtube.com/watch?v=UDVtMYqUAyw
