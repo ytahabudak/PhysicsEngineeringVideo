@@ -1,0 +1,4 @@
+KOD: EP103
+AD: Fizik Laboratuvarı 3 (FOTONİK SİSTEMLER)
+DONEM: Bahar
+OZET: Fotonik Sistemler Hakkında gerekli bilgileri kavrar ve alıştırma yapar

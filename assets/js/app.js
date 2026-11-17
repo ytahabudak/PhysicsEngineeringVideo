@@ -1,13 +1,12 @@
 /**
- * GAÜN Fizik Mühendisliği – Dijital Deney ve Ders Arşivi
- * Tamamen Statik İçerik Okuma, Güvenli DOM İşleme ve Bilimsel Görselleştirme Motoru
+ * GAÜN Fizik Mühendisliği – Deney ve Ders Arşivi
  */
 
 (function () {
   'use strict';
 
   /* --------------------------------------------------------------------------
-     1. GÜVENLİK VE YARDIMCI FONKSİYONLAR (XSS & Path Traversal Koruması)
+     1. GÜVENLİK VE YARDIMCI FONKSİYONLAR
      -------------------------------------------------------------------------- */
   const Security = {
     isValidSlug(slug) {
@@ -310,7 +309,7 @@
   };
 
   /* --------------------------------------------------------------------------
-     4. GÖRSEL EFEKTLER (Lusion Dalga Alanı + Spotlight + Scroll Reveal)
+     4. GÖRSEL EFEKTLER
      -------------------------------------------------------------------------- */
   const VisualFX = {
     initHeader() {
@@ -503,7 +502,7 @@
           Security.el('h3', { className: 'card-title', text: course.ad }),
           Security.el('p', {
             className: 'card-desc',
-            text: course.ozet || 'Bu ders kapsamındaki deney föyleri ve video anlatımları.'
+            text: course.ozet || 'Bu derse ait deney föyleri ve uygulama kayıtları.'
           })
         ]),
         Security.el('div', { className: 'card-footer' }, [
@@ -557,8 +556,8 @@
         stage.appendChild(aspect);
         stage.appendChild(
           Security.el('div', { className: 'video-caption' }, [
-            Security.el('span', { text: 'Kaynak: Harici Video Akışı (YouTube)' }),
-            Security.el('span', { text: '16:9 HD Oynatıcı' })
+            Security.el('span', { text: 'YouTube Video Kaydı' }),
+            Security.el('span', { text: '16:9 Oynatıcı' })
           ])
         );
         container.appendChild(stage);
@@ -600,7 +599,7 @@
       stage.appendChild(aspect);
       stage.appendChild(
         Security.el('div', { className: 'video-caption' }, [
-          Security.el('span', { text: 'Kaynak: Yerel Laboratuvar Arşivi (MP4)' }),
+          Security.el('span', { text: 'Laboratuvar Video Kaydı (MP4)' }),
           Security.el('span', { text: 'Oynatmak için tıklayın' })
         ])
       );
