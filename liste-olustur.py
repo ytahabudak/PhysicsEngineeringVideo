@@ -61,7 +61,10 @@ def build_manifest():
 
             deney_txt_path = os.path.join(exp_path, "deney.txt")
             if os.path.isfile(deney_txt_path):
-                experiments.append(exp_name)
+                experiments.append({
+                  "klasor": exp_name,
+                  "foy": os.path.isfile(os.path.join(exp_path, "foy.pdf"))
+                })
 
         dersler_list.append({
             "klasor": course_name,
