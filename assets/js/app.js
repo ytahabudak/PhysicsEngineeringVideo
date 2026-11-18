@@ -60,7 +60,10 @@
           key === 'id' ||
           key === 'type' ||
           key === 'placeholder' ||
-          key === 'aria-label'
+          key === 'aria-label' ||
+          key === 'download' ||
+          key === 'target' ||
+          key === 'rel'
         ) {
           node.setAttribute(key, val);
         }
@@ -132,7 +135,8 @@
         malzeme: [],
         adimlar: [],
         not: '',
-        video: ''
+        video: '',
+        pdf: ''
       };
 
       if (!rawText) return data;
@@ -167,7 +171,7 @@
         }
 
         const kvMatch = trimmed.match(
-          /^(BASLIK|BAŞLIK|SURE|SÜRE|ZORLUK|KATEGORI|KATEGORİ|OLCULEN|ÖLÇÜLEN|UYARI|VIDEO|VİDEO)\s*:\s*(.*)$/i
+          /^(BASLIK|BAŞLIK|SURE|SÜRE|ZORLUK|KATEGORI|KATEGORİ|OLCULEN|ÖLÇÜLEN|UYARI|VIDEO|VİDEO|PDF|FOY|FÖY)\s*:\s*(.*)$/i
         );
         if (kvMatch) {
           currentSection = null;
@@ -191,6 +195,7 @@
               .filter(Boolean);
           } else if (rawKey === 'UYARI') data.uyari = val;
           else if (rawKey === 'VIDEO') data.video = val;
+          else if ((rawKey === 'PDF' || rawKey === 'FOY') && val) data.pdf = val;
           continue;
         }
 
@@ -241,6 +246,15 @@
       } catch (err) {
         console.warn('JSON okunamadı:', url, err);
         return null;
+      }
+    },
+
+    async fileExists(url) {
+      try {
+        const res = await fetch(url, { method: 'HEAD', cache: 'no-cache' });
+        return res.ok;
+      } catch {
+        return false;
       }
     },
 
@@ -489,7 +503,7 @@
   };
 
   /* --------------------------------------------------------------------------
-     5. BİLEŞEN OLUŞTURUCULAR (Kartlar & Video Oynatıcı)
+     5. BİLEŞEN OLUŞTURUCULAR (Kartlar, Video Oynatıcı & PDF Butonu)
      -------------------------------------------------------------------------- */
   const Components = {
     createCourseCard(course) {
@@ -531,6 +545,47 @@
           Security.el('span', { className: 'card-action', text: 'Deneyi Aç →' })
         ])
       ]);
+    },
+
+    async renderPdfButton(container, exp) {
+      if (!container) return;
+      container.innerHTML = '';
+
+      const baseDir = `dersler/${exp.courseFolder}/${exp.expFolder}`;
+      let pdfUrl = null;
+      let downloadName = `${exp.dersKod}-${exp.expFolder}-foy.pdf`;
+
+      if (exp.pdf) {
+        if (/^https?:\/\//i.test(exp.pdf)) {
+          pdfUrl = exp.pdf;
+        } else if (Security.isValidSlug(exp.pdf)) {
+          const candidate = `${baseDir}/${exp.pdf}`;
+          if (await DataStore.fileExists(candidate)) {
+            pdfUrl = candidate;
+            downloadName = exp.pdf;
+          }
+        }
+      } else {
+        const defaultCandidate = `${baseDir}/foy.pdf`;
+        if (await DataStore.fileExists(defaultCandidate)) {
+          pdfUrl = defaultCandidate;
+        }
+      }
+
+      if (!pdfUrl) return;
+
+      const btn = Security.el(
+        'a',
+        {
+          href: pdfUrl,
+          download: downloadName,
+          target: '_blank',
+          rel: 'noopener noreferrer',
+          className: 'btn btn-primary'
+        },
+        ['Deney Föyünü İndir (PDF)']
+      );
+      container.appendChild(btn);
     },
 
     renderVideoPlayer(container, exp) {
@@ -752,6 +807,7 @@
         document.getElementById('ed-title').textContent = exp.baslik;
         document.getElementById('ed-course-name').textContent = `${exp.dersKod} ${exp.dersAd}`;
 
+        Components.renderPdfButton(document.getElementById('ed-pdf-action'), exp);
         Components.renderVideoPlayer(document.getElementById('ed-video-container'), exp);
 
         const warnBox = document.getElementById('ed-warning-box');
